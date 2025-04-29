@@ -1,6 +1,12 @@
-import "./App.css";
 import CalorieRecord from "./Components/CalorieRecord";
 
-export default function App() {
-  <CalorieRecord />;
+function App() {
+  return (
+    <div className="App">
+      <h1>Hello</h1>
+      <CalorieRecord></CalorieRecord>
+    </div>
+  );
 }
+
+export default App;

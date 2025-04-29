@@ -1,10 +1,12 @@
-export default function CalorieRecord() {
+function CalorieRecord() {
   return (
-    <li>
-      <ul> 340 calorie</ul>
-      <ul>Breakfast</ul>
-      <ul>Eggs + Beans</ul>
-      <ul>{Date.now()}</ul>
-    </li>
+    <ul>
+      <li> 340 calorie</li>
+      <li>Breakfast</li>
+      <li>Eggs + Beans</li>
+      <li>{Date.now()}</li>
+    </ul>
   );
 }
+
+export default CalorieRecord;
