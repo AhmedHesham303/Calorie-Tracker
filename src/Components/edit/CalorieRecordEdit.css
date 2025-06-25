@@ -1,0 +1,55 @@
+/* Form styles */
+
+form {
+  background-color: #d4e0ff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+form label {
+  color: #333;
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"] {
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  min-width: 255px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  display: block;
+  box-sizing: border-box;
+}
+
+form select {
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  min-width: 255px;
+  margin-bottom: 20px;
+  display: block;
+  box-sizing: border-box;
+}
+
+.footer {
+  display: flex;
+}
+
+.footer button {
+  background-color: white;
+  color: #012367;
+  display: block;
+  border: 3px solid #012367;
+  border-radius: 15px;
+  padding: 10px;
+  cursor: pointer;
+  flex-grow: 1;
+}

@@ -1,5 +1,5 @@
 import CalorieRecord from "./Components/calorieRecordSection/CalorieRecord";
-// import CaloriesRecordEdit from "../edit/CaloriesRecordEdit";
+import CaloriesRecordEdit from "./Components/edit/CaloriesRecordEdit";
 import RecordList from "./Components/calorieRecordSection/RecordList";
 import "./Components/calorieRecordSection/RecordList.css"; // move this to the top or after imports
 
@@ -33,6 +33,7 @@ export default function App() {
   return (
     <div className="App">
       <h1>Welcome to React with Almdrasa!</h1>
+      <CaloriesRecordEdit />
       <RecordList records={records} />
     </div>
   );
