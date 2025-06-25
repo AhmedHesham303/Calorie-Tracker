@@ -2,10 +2,16 @@ import "./CalorieRecord.css";
 import "./CalorieDateRecord.css";
 import StyledRecordCell from "../common/StyledRecordCell";
 import CalorieDateRecord from "./CalorieDateRecord";
+import { useState } from "react";
 function CalorieRecord(props) {
+  const [calories, setCalories] = useState(props.calories);
   const month = props.date.toLocaleString("default", { month: "long" });
   const year = props.date.getFullYear();
   const day = props.date.getDate();
+
+  const caloriesCkickHandler = function () {
+    setCalories(calories + 10);
+  };
   return (
     <ul className="record">
       <li>
@@ -18,8 +24,8 @@ function CalorieRecord(props) {
       <li>{props.meal}</li>
       <li>{props.content}</li>
 
-      <li className="record-calories">
-        <StyledRecordCell>{props.calories}</StyledRecordCell>
+      <li className="record-calories" onClick={caloriesCkickHandler}>
+        <StyledRecordCell>{calories}</StyledRecordCell>
       </li>
     </ul>
   );
