@@ -1,4 +1,4 @@
-import CalorieRecord from "./Components/CalorieRecord";
+import CalorieRecord from "./Components/calorieRecordSection/CalorieRecord";
 
 function App() {
   return (

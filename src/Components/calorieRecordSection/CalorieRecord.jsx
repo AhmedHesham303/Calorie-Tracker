@@ -1,6 +1,6 @@
 import "./CalorieRecord.css";
 import "./CalorieDateRecord.css";
-import StyledRecordCell from "./common/StyledRecordCell";
+import StyledRecordCell from "../common/StyledRecordCell";
 import CalorieDateRecord from "./CalorieDateRecord";
 function CalorieRecord(props) {
   const month = props.date.toLocaleString("default", { month: "long" });

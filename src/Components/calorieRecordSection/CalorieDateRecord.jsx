@@ -1,5 +1,5 @@
 import "./CalorieDateRecord";
-import StyledRecordCell from "./common/StyledRecordCell";
+import StyledRecordCell from "../common/StyledRecordCell";
 export default function CalorieDateRecord(props) {
   return (
     <StyledRecordCell className="record-date">
