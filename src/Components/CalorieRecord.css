@@ -1,27 +1,18 @@
 .record {
   border: 1px solid #ccc;
-
   border-radius: 3px;
-
   list-style: none;
-
   display: flex;
-
   color: #666;
-
   justify-content: space-around;
-
-  padding: 0;
-
+  padding: 1rem;
   height: 40px;
-
+  gap: 2rem;
   align-items: center;
-
   background-color: antiquewhite;
 }
 
 .record-calories {
   color: #012367;
-
   font-weight: bold;
 }
