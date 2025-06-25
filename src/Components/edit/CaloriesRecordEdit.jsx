@@ -5,17 +5,35 @@ export default function CaloriesRecordEdit() {
   const [mealValue, setMealValue] = useState();
   const [contentValue, setContentValue] = useState();
   const [caloriesValue, setCaloriesValue] = useState();
+  const [mealRecord, setMealRecord] = useState({
+    date: dateValue,
+    calories: caloriesValue,
+    content: contentValue,
+    meal: mealValue,
+  });
   const onChangeDateHandler = function (event) {
-    setDateValue(event.target.value);
+    setMealRecord({
+      ...mealRecord,
+      date: event.target.value,
+    });
   };
   const onChangeMealHandler = function (event) {
-    setMealValue(event.target.value);
+    setMealRecord({
+      ...mealRecord,
+      meal: event.target.value,
+    });
   };
   const onChangeCaloriesHandler = function (event) {
-    setCaloriesValue(event.target.value);
+    setMealRecord({
+      ...mealRecord,
+      calories: event.target.value,
+    });
   };
   const onChangeContentHandler = function (event) {
-    setContentValue(event.target.value);
+    setMealRecord({
+      ...mealRecord,
+      content: event.target.value,
+    });
   };
   const onSubmitHandler = function (event) {
     event.preventDefault();
