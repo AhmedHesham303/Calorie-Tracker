@@ -3,7 +3,7 @@ import "./CalorieDateRecord.css";
 import StyledRecordCell from "../common/StyledRecordCell";
 import CalorieDateRecord from "./CalorieDateRecord";
 import { useState } from "react";
-function CalorieRecord(props) {
+export default function CalorieRecord(props) {
   const [calories, setCalories] = useState(props.calories);
   const month = props.date.toLocaleString("default", { month: "long" });
   const year = props.date.getFullYear();
@@ -30,5 +30,3 @@ function CalorieRecord(props) {
     </ul>
   );
 }
-
-export default CalorieRecord;
