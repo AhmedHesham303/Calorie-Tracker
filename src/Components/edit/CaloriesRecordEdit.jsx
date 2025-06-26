@@ -9,7 +9,7 @@ export default function CaloriesRecordEdit(props) {
     date: "",
     calories: 0,
     content: "",
-    meal: "",
+    meal: "Breakfast",
   };
   const [mealRecord, setMealRecord] = useState(DEFAULT_VALUE);
   const onChangeDateHandler = function (event) {

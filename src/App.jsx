@@ -33,7 +33,11 @@ export default function App() {
   const [records, setRecords] = useState(INITIAL_RECORDS);
 
   const formSubmitHandler = function (record) {
-    setRecords([record, ...record]);
+    const foramtedRecord = {
+      ...record,
+      date: new Date(record.date),
+    };
+    setRecords([foramtedRecord, ...records]);
     console.log(record);
   };
   return (
