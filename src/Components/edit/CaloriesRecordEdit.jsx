@@ -6,10 +6,10 @@ export default function CaloriesRecordEdit() {
   const [contentValue, setContentValue] = useState();
   const [caloriesValue, setCaloriesValue] = useState();
   const [mealRecord, setMealRecord] = useState({
-    date: dateValue,
-    calories: caloriesValue,
-    content: contentValue,
-    meal: mealValue,
+    // date: dateValue,
+    // calories: caloriesValue,
+    // content: contentValue,
+    // meal: mealValue,
   });
   const onChangeDateHandler = function (event) {
     setMealRecord({
@@ -37,14 +37,25 @@ export default function CaloriesRecordEdit() {
   };
   const onSubmitHandler = function (event) {
     event.preventDefault();
+    setMealRecord({
+      date: "",
+      content: "",
+      calories: 0,
+      meal: "",
+    });
   };
   return (
     <form onSubmit={onSubmitHandler}>
       <label htmlFor="date">Date: </label>
-      <input type="date" id="date" onChange={onChangeDateHandler} />
+      <input
+        type="date"
+        id="date"
+        value={mealRecord.date}
+        onChange={onChangeDateHandler}
+      />
 
       <label htmlFor="meal">Meal: </label>
-      <select id="meal" onChange={onChangeMealHandler}>
+      <select id="meal" value={mealRecord.meal} onChange={onChangeMealHandler}>
         <option value="Brealfast">Brealfast</option>
         <option value="Dinner">Dinner</option>
         <option value="Lunch">Lunch</option>
@@ -52,10 +63,20 @@ export default function CaloriesRecordEdit() {
       </select>
 
       <label htmlFor="content">Content: </label>
-      <input type="text" id="content" onChange={onChangeContentHandler} />
+      <input
+        type="text"
+        value={mealRecord.content}
+        id="content"
+        onChange={onChangeContentHandler}
+      />
 
       <label htmlFor="calories">Calories: </label>
-      <input type="number" id="calories" onChange={onChangeCaloriesHandler} />
+      <input
+        type="number"
+        id="calories"
+        value={mealRecord.calories}
+        onChange={onChangeCaloriesHandler}
+      />
       <div className="footer">
         <button>Add Record</button>
       </div>
