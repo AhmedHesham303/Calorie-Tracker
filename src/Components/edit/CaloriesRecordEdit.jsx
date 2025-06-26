@@ -5,12 +5,13 @@ export default function CaloriesRecordEdit() {
   const [mealValue, setMealValue] = useState();
   const [contentValue, setContentValue] = useState();
   const [caloriesValue, setCaloriesValue] = useState();
-  const [mealRecord, setMealRecord] = useState({
-    // date: dateValue,
-    // calories: caloriesValue,
-    // content: contentValue,
-    // meal: mealValue,
-  });
+  const DEFAULT_VALUE = {
+    date: "",
+    calories: 0,
+    content: "",
+    meal: "",
+  };
+  const [mealRecord, setMealRecord] = useState(DEFAULT_VALUE);
   const onChangeDateHandler = function (event) {
     setMealRecord({
       ...mealRecord,
