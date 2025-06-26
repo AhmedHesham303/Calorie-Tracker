@@ -30,10 +30,14 @@ export default function App() {
       content: "eggs",
     },
   ];
+
+  const formSubmitHandler = function (record) {
+    console.log(record);
+  };
   return (
     <div className="App">
       <h1>Welcome to React with Almdrasa!</h1>
-      <CaloriesRecordEdit />
+      <CaloriesRecordEdit onFormSubmit={formSubmitHandler} />
       <RecordList records={records} />
     </div>
   );
