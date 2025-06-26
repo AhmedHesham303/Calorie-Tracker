@@ -37,7 +37,7 @@ export default function App() {
       ...record,
       date: new Date(record.date),
     };
-    setRecords([foramtedRecord, ...records]);
+    setRecords([...records, foramtedRecord]);
     console.log(record);
   };
   return (
