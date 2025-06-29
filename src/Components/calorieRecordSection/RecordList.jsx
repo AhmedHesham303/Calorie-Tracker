@@ -7,6 +7,7 @@ export default function RecordList(props) {
       {props.records.map((record, index) => (
         <li key={index}>
           <CalorieRecord
+            key={record.id}
             date={record.date}
             meal={record.meal}
             content={record.content}
