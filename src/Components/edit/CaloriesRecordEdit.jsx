@@ -73,6 +73,15 @@ export default function CaloriesRecordEdit(props) {
         id="calories"
         value={mealRecord.calories}
         onChange={onChangeCaloriesHandler}
+        style={
+          mealRecord.calories < 0
+            ? {
+                border: "1px solid red",
+                backgroundColor: "white",
+                color: "red",
+              }
+            : {}
+        }
       />
       <div className="footer">
         <button>Add Record</button>
