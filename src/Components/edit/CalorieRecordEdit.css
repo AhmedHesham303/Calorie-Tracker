@@ -39,6 +39,12 @@ form select {
   box-sizing: border-box;
 }
 
+form input[type="number"].error {
+  border: 1px solid red;
+  background-color: white;
+  color: "red";
+}
+
 .footer {
   display: flex;
 }
